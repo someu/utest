@@ -1,7 +1,5 @@
 <template>
-  <div class="app">
-    <el-button type="primary">123</el-button>
-  </div>
+  <router-view></router-view>
 </template>
 <script>
 export default {
@@ -9,5 +7,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-</style>
+<style lang="less"></style>
