@@ -1,33 +1,12 @@
 <template>
   <div class="header">
-    <div class="menu-action" @click="triggerMenuCollapse">
-      <el-icon v-if="menuCollapse"><expand /></el-icon>
-      <el-icon v-else><fold /></el-icon>
-    </div>
+    <div class="logo">UTest</div>
+    <div class="avatar"></div>
   </div>
 </template>
 
 <script>
-import { ElIcon } from "element-plus";
-import { Fold, Expand } from "@element-plus/icons-vue";
-
-export default {
-  components: {
-    ElIcon,
-    Fold,
-    Expand,
-  },
-  computed: {
-    menuCollapse() {
-      return this.$store.state.global.menuCollapse;
-    },
-  },
-  methods: {
-    triggerMenuCollapse() {
-      this.$store.commit("global/triggerMenuCollapse");
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="less" scoped>
@@ -36,8 +15,12 @@ export default {
   display: flex;
   align-items: center;
 
-  .menu-action {
-    font-size: 18px;
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #444;
+    letter-spacing: 1px;
   }
 }
 </style>
